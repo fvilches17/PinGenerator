@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinFun", "PinFun\PinFun.csproj", "{907FF0D8-84EF-4837-B826-032EA91240E5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{26386A8A-11C2-4094-A594-DEF87D193A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinFun.UnitTests", "PinFun.UnitTests\PinFun.UnitTests.csproj", "{74D8CF63-62CA-440D-82F6-68941C0CF870}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{907FF0D8-84EF-4837-B826-032EA91240E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{907FF0D8-84EF-4837-B826-032EA91240E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{907FF0D8-84EF-4837-B826-032EA91240E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74D8CF63-62CA-440D-82F6-68941C0CF870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74D8CF63-62CA-440D-82F6-68941C0CF870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74D8CF63-62CA-440D-82F6-68941C0CF870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74D8CF63-62CA-440D-82F6-68941C0CF870}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{74D8CF63-62CA-440D-82F6-68941C0CF870} = {26386A8A-11C2-4094-A594-DEF87D193A11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B12FADF2-EFEE-4772-976E-02A7DC6DADE4}
