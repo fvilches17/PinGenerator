@@ -6,13 +6,18 @@ namespace PinFun
 {
     public struct PinNumber: IComparable<PinNumber>, IEquatable<PinNumber>
     {
-        public ushort[] DigitArray { get; set; }
+        public ushort[] DigitArray { get; }
         private static readonly Random Rand = new Random();
 
         public int Length => DigitArray.Length;
 
         public PinNumber(params ushort[] digitArray)
         {
+            if (digitArray?.Length <= 0)
+            {
+                throw new ArgumentException($"{nameof(DigitArray)} has to have at least one value");
+            }
+
             DigitArray = digitArray;
         }
 
@@ -62,6 +67,11 @@ namespace PinFun
 
         public bool Validate(IList<Func<IList<ushort>, bool>> policies)
         {
+            if (policies == null || !policies.Any())
+            {
+                return true;
+            }
+
             var digitArray = DigitArray;
             return policies.All(policy => policy(digitArray));
         }
