@@ -13,7 +13,12 @@ namespace PinFun
 
         public PinNumber(params ushort[] digitArray)
         {
-            if (digitArray?.Length <= 0)
+            if (digitArray == null)
+            {
+                throw new ArgumentNullException(nameof(DigitArray));
+            }
+        
+            if (digitArray.Length <= 0)
             {
                 throw new ArgumentException($"{nameof(DigitArray)} has to have at least one value");
             }
