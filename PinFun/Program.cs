@@ -19,6 +19,7 @@ namespace PinFun
 
             var sortedSetOfPinNumbers = PinNumber.GenerateSet(numberOfRequestedPins, pinLength, policies);
             DisplayResults(pinLength, numberOfRequestedPins, sortedSetOfPinNumbers);
+            //TODO: give user option to a. display on screen b. export to txt, c. export to csv, d. copy to clipboard
         }
 
         private static void DisplayResults(int pinLnegth, int numberOfRequestedPins, ICollection<PinNumber> sortedSet)
