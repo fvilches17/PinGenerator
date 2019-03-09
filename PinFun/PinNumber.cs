@@ -52,7 +52,7 @@ namespace PinFun
 
             while (sortedSetOfPinNumbers.Count < numberOfRequestedPins && setOfAllAvailablePins.Any())
             {
-                var pin = Generate(pinLength);
+                var pin = new PinNumber(pinLength);
                 setOfAllAvailablePins.Remove(pin);
 
                 if (pin.Validate(policies))

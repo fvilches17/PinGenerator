@@ -18,7 +18,6 @@ namespace PinFun
             };
 
             var sortedSetOfPinNumbers = PinNumber.GenerateSet(numberOfRequestedPins, pinLength, policies);
-
             DisplayResults(pinLength, numberOfRequestedPins, sortedSetOfPinNumbers);
         }
 

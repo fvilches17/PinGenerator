@@ -12,14 +12,14 @@ namespace PinFun
             if (pinNumbers.Count == 1) return true;
 
             var index = 1;
-            var isIncremental = true;
             while (index < pinNumbers.Count)
             {
-                isIncremental &= pinNumbers[index - 1] < pinNumbers[index];
+                bool isIncremental = pinNumbers[index - 1] < pinNumbers[index];
+                if (!isIncremental) return true;
                 index++;
             }
 
-            return !isIncremental;
+            return false;
         }
 
         public static bool NoDuplicateDigits(IList<ushort> pinNumbers)
