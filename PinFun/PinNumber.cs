@@ -36,13 +36,7 @@ namespace PinFun
             }
         }
 
-        public static PinNumber Generate(int pinLength)
-        {
-            if (pinLength <= 0) throw new ArgumentOutOfRangeException($"{nameof(pinLength)} should be greater than 0");
-            return new PinNumber(pinLength);
-        }
-
-        public static PinNumber Generate(int pinLength, IList<Func<IList<ushort>, bool>> policies)
+        public static PinNumber Generate(int pinLength, IList<Func<IList<ushort>, bool>> policies = null)
         {
             if (pinLength <= 0) throw new ArgumentOutOfRangeException($"{nameof(pinLength)} should be greater than 0");
             return GenerateSet(numberOfRequestedPins: 1, pinLength: pinLength, policies: policies).First();
